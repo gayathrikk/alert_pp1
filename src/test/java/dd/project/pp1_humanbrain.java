@@ -35,7 +35,7 @@ public class pp1_humanbrain {
 	            session.connect();
 
 	            Channel channel = session.openChannel("exec");
-	            ((ChannelExec) channel).setCommand("ls -lh --time-style=long-iso /store/nvmestorage/postImageProcessor");
+	            ((ChannelExec) channel).setCommand("ls -lh --time-style=long-iso /mnt/local/nvmestorage/postImageProcessor");
 	            channel.setInputStream(null);
 	            ((ChannelExec) channel).setErrStream(System.err);
 	            InputStream in = channel.getInputStream();
@@ -60,7 +60,7 @@ public class pp1_humanbrain {
 	            session.disconnect();
 
 	            String[] lines = output.toString().split("\n");
-	            System.out.println("Files in  /store/nvmestorage/postImageProcessor:\n");
+	            System.out.println("Files in  /mnt/local/nvmestorage/postImageProcessor:\n");
 
 	            int todayFileCount = 0;
 	            int oldFileCount = 0;
@@ -144,7 +144,7 @@ public class pp1_humanbrain {
 
 	            message.setSubject("ALERT: Old Files Found in " + machineName + " 📂");
 	            String content = "<p>This is an automated alert:</p>" +
-	                    "<p>The directory <b> /store/nvmestorage/postImageProcessor</b> on machine <b style='color:blue;'>" + machineName + "</b> contains old files.</p>" +
+	                    "<p>The directory <b> /mnt/local/nvmestorage/postImageProcessor</b> on machine <b style='color:blue;'>" + machineName + "</b> contains old files.</p>" +
 	                    "<p><b>" + oldFileCount + "</b> old files exist:</p>" +
 	                    "<pre>" + oldFiles + "</pre>" +
 	                    "<p>Please review and take necessary action.</p>" +
