@@ -93,7 +93,7 @@ public class pp1storage {
 	        // Recipient's email ID needs to be mentioned.
 	  
 	    	String[] to = {"divya.d@htic.iitm.ac.in"};
-	    	String[] cc = {"nathan.i@htic.iitm.ac.in, venip@htic.iitm.ac.in"};
+	    	 String[] cc = {"venip@htic.iitm.ac.in", "nitheshkumarsundhar@gmail.com", "meena@htic.iitm.ac.in", "gayathri@htic.iitm.ac.in"};
 	        String[] bcc = {};  	
 	    
 	        // Sender's email ID needs to be mentioned
